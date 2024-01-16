@@ -1,0 +1,163 @@
+react----js library(front end development)
+
+basic commands:
+1.to create project npx create-react-app [project name]
+2.npm start
+
+3. to install react material: npm install @mui/material @emotion/react @emotion/styledv
+
+4. to build a project ---npm run build
+
+5.to install react bootstrap-----npm install react-bootstrap bootstrap
+
+6.free themes for bootstrap: bootswatch---download----min.css
+
+7.use react feather site for react icons----[npm.js---library should be installed to our project  first]----eg: <Camera color="red" size={48} />
+
+8.to direct to another page =-----npm i react-router-dom
+basic concepts
+
+-reusable component based approach
+-JSX:
+
+
+index.html which is inside the public is the one which browse the page
+//only files needed are public and src
+//index.js is where the react application gets started
+//to get the id of div in index.html a root is created in react dom in index.js
+//the created root is acted as a virtual dom, react has a real DOM .....using that a virtual dom is created that is what is happening in index.js
+//document.ggetelementbyid is used to get the div = the step is caleed creating virtual dom
+//the root is rendered by using the strict mode in react(gets all the features of react)
+//<App/> is a self closing tag---it is a selector
+//app.js is the entry point of the project[content]
+//index.js is the starting point[browser]
+//VIRTUAL DOM: no need of loading the entire page when there is cahnges made-----the real dom and virtual dom is compared 
+//components can be re-used
+
+//component starts with capital letter
+---------COMPONENTS------
+
+mainly two types:
+                 1.class based components------component and code will be inside a class 
+                 2.function based components---logic given inside the function  [rfce---used to get structure ]
+
+
+------STATE--------
+
+
+//In react one way sharing only possible----from parent to child
+//to store value in JavaScriptside in react we use [state]   
+//state can be shared to child component
+//state has a adv that it transfers value, transfering state to child component possible 
+//Based on components state is classified into two : class based known as [statefull component ]-----by default functions to create state was available inside the component
+                                                   : function based known as [stateless component]---by default functions to create state was not available
+
+
+------HOOK---------
+
+//React HOOK:is a pre-defined function [was introduced in 16th version of react in order to create state]
+//hook can be introduced by us and can be used in the entire project
+
+
+TO USE HOOK:
+ syntax------ use predefined-function()-------[use] should be given before the predefined-function
+ in function based component to create state we use :   use state()------this is a hook which is used to create state in functional component
+ 
+
+ state creation syntax:
+                         const [state-name,state value updation fn]=useState('initial value in single quotes')
+
+
+
+
+
+PROPS:-------props are used to recieve the data from parent to child
+             used to share data between parent and child
+
+             If data is in object then it should be destructured-----remove the props key name and give {props key name}
+
+
+      ----CONDITIONAL RENDERING----
+
+      based on a condition the elements inside html is rendered/or shown
+
+      1.the content to be rendered should be given inside a curly braces
+      2.TRUTHY OPERATOR is used if only one condition is there ie else condition is not present    
+
+
+//npm tostify used instead of alert    
+  ---first install from npm tostify
+  ----then copy paste the two import statements
+  ---then change the alert words to toast
+  ---then click the demo worth thousand words   
+
+
+//for automatic id generation in react we use:uuidv4 package
+
+
+
+----FOR DRAG AND DROP------
+     
+     dragable attribute set to card
+     to get id embedded code, onDragStart is used----->onDragStart={e=>dragStarted(e,card?.id)} 
+
+     ---->e.dataTransfer.setData("cardId",id)-----is a default method
+
+     ---drappable given to category....and onDragOver={}
+
+      //to identify the event that is dropped------ondrop
+
+
+
+
+
+
+
+
+ --------------REDUX TOOLKIT-----------
+
+ if data to be shared from parent to grand child this process is called   PROPS DRILLING
+
+ in the process of props drilling dependency is increased
+
+ in props drilling if any component is failed then the entire project failes/crashess----thats the drawback of using props    
+
+ props drilling increases coupling 
+
+to overcome props drilling REDUX toolkit is used
+
+
+//store:to hold all state available for components
+
+//components:can select state from store can not update the state directly
+
+//action: to update state component will dispatch an action where it defines the logic
+
+//reducer: response from action will be passed to reducer automatically and reducer can directly update state in the store
+
+
+
+
+-------------node.js------------
+
+>to run js code in runtime environment (outside browser)
+>node processes all the requests at the same time
+>
+
+
+
+----------------------data sharing btw unrelated components--------------
+
+we use context api 
+create a component 
+inside index.js give the component and put add.js inside it
+create context and export
+
+
+
+
+
+
+
+
+
